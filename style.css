@@ -1,0 +1,55 @@
+p {
+    min-width: 200px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    
+}
+
+button{
+    min-width: 200px;
+    height: 40px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    font-style: italic;
+    background-color: beige;
+    border: 1px solid #0000002a;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    cursor: pointer;
+    position: relative; /* Necessary for positioning pseudo-elements */
+    overflow: hidden; /* To hide the line animation */
+}
+
+button:hover{
+    background-color: rgb(221, 194, 159);
+}
+button:active{
+    background-color: rgb(254, 234, 209);
+}
+
+button span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(75, 106, 107);
+    left: 20px;
+    right: 10px;
+    bottom: 17px;
+    transition: width 0.5s ease; /* Smooth animation */
+}
+
+button:hover span::after {
+    width: 80%; /* Expand the line across the text */
+}
+
+
+.wrapper{
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
